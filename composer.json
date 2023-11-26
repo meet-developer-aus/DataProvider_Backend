@@ -5,8 +5,13 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Romeo\\DataproviderBackend\\": "src/"
-        }
+           
+            "ATDWClientNameSpace\\": "src/"
+        },
+        "classmap": [
+            "src/",
+            "vendor/"
+        ]
     },
     "authors": [
         {
