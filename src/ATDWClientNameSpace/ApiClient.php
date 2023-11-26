@@ -2,12 +2,7 @@
 namespace ATDWClientNameSpace;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\HandlerStack;
-use GuzzleHttp\Middleware;
-use Psr\Http\Message\RequestInterface;
-use Psr\Http\Message\ResponseInterface;
-use Monolog\Logger;
-use Monolog\Handler\StreamHandler;
+
 
 // creating API request client class named ApiClient with properties + methods
 
@@ -72,7 +67,7 @@ class ApiClient
             // Load XML string
             libxml_use_internal_errors(true);
 
-            // Load content as simplexml objects
+           // Load content as simplexml objects
             $xml = simplexml_load_string($utf16leContent);
 
 
