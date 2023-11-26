@@ -21,16 +21,17 @@ $apiClientObj = new ATDWClientNameSpace\ApiClient($apiKey);
 
 //API endpoints to fetch area data
 $areaEndPoint = 'areas';
-$locationEndPoitn = 'locations';
+$locationEndPoint = 'locations';
 
 
 
-$areaData = $apiClientObj->fetchAreaData($areaEndPoint);
-var_dump($areaData);
+//$areaData = $apiClientObj->fetchAreaData($areaEndPoint);
+//var_dump($areaData);
 
 
-$locationData = $apiClientObj->fetchLocationData($locationEndPoint);
-var_dump($locationData );
+$locationData = $apiClientObj->fetchAreaData($locationEndPoint);
+var_dump($locationData);
+
 
 // return  data as json data..
 
