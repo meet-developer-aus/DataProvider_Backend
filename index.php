@@ -7,7 +7,7 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 //API key
-$apiKey=$_ENV['API_KEY'];
+$apiKey = $_ENV['API_KEY'];
 
 
 //use ATDWClientNameSpace\ApiClient;/
@@ -16,8 +16,22 @@ $apiKey=$_ENV['API_KEY'];
 $apiClientObj = new ATDWClientNameSpace\ApiClient($apiKey);
 
 
+
 // Fetch API data by ApiClient by bew Apiclient instance 
-$data = $apiClientObj->fetchData();
+
+//API endpoints to fetch area data
+$areaEndPoint = 'areas';
+$locationEndPoitn = 'locations';
+
+
+
+$areaData = $apiClientObj->fetchAreaData($areaEndPoint);
+var_dump($areaData);
+
+
+$locationData = $apiClientObj->fetchLocationData($locationEndPoint);
+var_dump($locationData );
 
 // return  data as json data..
 
+?>
