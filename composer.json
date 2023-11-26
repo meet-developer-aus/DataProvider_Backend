@@ -1,0 +1,23 @@
+{
+    "name": "romeo/dataprovider_backend",
+    "description": "PHP backend application fetch data from the Atlas API and provide JSON of list accommodation options in Sydney",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Romeo\\DataproviderBackend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Romeo Antony"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require-dev": {
+        "phpunit/phpunit": "^10.4"
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    }
+}
