@@ -1,4 +1,10 @@
 <?php
+// Set CORS headers
+header("Access-Control-Allow-Origin: *"); // need to replace with actual frontend URL 
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+
+
 
 require_once 'vendor/autoload.php';
 
