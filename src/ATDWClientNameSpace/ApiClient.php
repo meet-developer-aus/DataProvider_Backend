@@ -31,6 +31,13 @@ class ApiClient
         $this->httpClient = new Client();
 
 
+    }//fetch regions data
+    public function fetchRegionData($regionEndPoint)
+    {
+       // echo "fetch region Data is called";
+        return $this->fetchAnyEndpoint($regionEndPoint);
+
+
     }
 
     // function to fetch API Area data
@@ -42,7 +49,7 @@ class ApiClient
         return $this->fetchAnyEndpoint($areaEndPoint);
        
     }
-
+//fetch locations data
 
     public function fetchLocationData($locationEndPoint)
     {
@@ -51,6 +58,7 @@ class ApiClient
 
 
     }
+
 
 
    public function fetchAnyEndpoint($EndPoint)
@@ -106,7 +114,8 @@ class ApiClient
         $array = json_decode(json_encode($xml), true);
 
         
-        return json_encode($array, JSON_PRETTY_PRINT);
+        //  return json_encode($array, JSON_PRETTY_PRINT);
+        return $array;
         }
     } catch (\Exception $e) {
         // Error handling when throw a custom exception
