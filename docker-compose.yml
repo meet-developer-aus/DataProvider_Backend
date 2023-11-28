@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  phpbackend:
+    image: romromdev/vuejs-spa:latest
+    ports:
+      - "80:80"
+    env_file:
+      - .env
+
+  vuefrontend:
+    image: romromdev/vuejs-spa:latest
+    ports:
+      - "8080:80"
+    depends_on:
+      - phpbackend
