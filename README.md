@@ -8,19 +8,20 @@ This PHP backend application serves as a data provider, fetching information fro
 
 1. Clone the Repository:
 
-    git clone https://github.com/romeo/dataprovider_backend.git
+    git clone 
+   https://github.com/meet-developer-aus/DataProvider_Backend.git
 
 
-2. Navigate to the Project Directory:
+3. Navigate to the Project Directory:
 
    cd dataprovider_backend
 
 
-3. Install Dependencies:
+4. Install Dependencies:
 
    composer install
 
-4. Create Environment File:
+5. Create Environment File:
         Create the .env in root folder where main script runs(example folder in which index.php reside)
         Set your Atlas API key in the .env file.
 
