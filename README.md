@@ -65,3 +65,19 @@ Notes
     PHPUnit is included in the require-dev section for testing purposes.
 
 
+installation via docker
+Instructions
+Installation via docker which install both  freondend app avialble at
+https://github.com/meet-developer-aus/SPA_VUE.git
+and also this backend app 
+https://github.com/meet-developer-aus/DataProvider_Backend.git
+
+
+dcoker install as standalon app 
+
+
+note: since php backend app use API ket to fetch, create .env file in folder where docker-compose.yml run 
+.env file needs to have API key 
+as API_KEY=***********
+
+docker-compose up 
