@@ -7,6 +7,10 @@ services:
       - "80:80"
     env_file:
       - .env
+    networks:
+      - my-network
+    volumes:
+      - ./env:/var/www/html/.env
 
   vuefrontend:
     image: romromdev/vuejs-spa:latest
@@ -14,5 +18,8 @@ services:
       - "8080:80"
     depends_on:
       - phpbackend
+    networks:
+      - my-network
+
 networks:
   my-network:
