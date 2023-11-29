@@ -30,16 +30,23 @@ $regionEndPoint = 'regions';
 $areaEndPoint = 'areas';
 $locationEndPoint = 'locations';
 
+try {
+    $regionData = $apiClientObj->fetchRegionData($regionEndPoint);
+    // Handling successful regionData response
+   // var_dump($regionData);
 
-$regionData = $apiClientObj->fetchRegionData($regionEndPoint);
-// var_dump($regionData);
+    $areaData = $apiClientObj->fetchAreaData($areaEndPoint);
+    // successful areaData response
+  //  var_dump($areaData);
 
-$areaData = $apiClientObj->fetchAreaData($areaEndPoint);
-// var_dump($areaData);
+    $locationData = $apiClientObj->fetchAreaData($locationEndPoint);
+    // Handle successful locationData 
+   // var_dump($locationData);
+} catch (Exception $e) {
+    // Handlingg exceptions
+    echo "An error occurred: " . $e->getMessage();
+}
 
-
-$locationData = $apiClientObj->fetchAreaData($locationEndPoint);
-// var_dump($locationData);
 
 
 // Combines all output region, area and location data into a single array
